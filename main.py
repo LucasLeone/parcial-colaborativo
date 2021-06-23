@@ -320,6 +320,8 @@ while True:
 
                                     if cliente1[6] != 'BANMAS':
                                         cliente1[2] -= COMISION
+                                        importe_comisiones += COMISION
+
                                     break
                                 else:
                                     print('El cajero no puede entregar el monto solicitado')
@@ -389,6 +391,8 @@ while True:
 
                                     if cliente2[6] != 'BANMAS':
                                         cliente2[2] -= COMISION
+                                        importe_comisiones += COMISION
+
                                     break
                                 else:
                                     print('El cajero no puede entregar el monto solicitado')
@@ -458,6 +462,8 @@ while True:
 
                                     if cliente3[6] != 'BANMAS':
                                         cliente3[2] -= COMISION
+                                        importe_comisiones += COMISION
+
                                     break
                                 else:
                                     print('El cajero no puede entregar el monto solicitado')
@@ -527,6 +533,8 @@ while True:
                                     
                                     if cliente4[6] != 'BANMAS':
                                         cliente4[2] -= COMISION
+                                        importe_comisiones += COMISION
+
                                     break
                                 else:
                                     print('El cajero no puede entregar el monto solicitado')
@@ -596,6 +604,8 @@ while True:
 
                                     if cliente5[6] != 'BANMAS':
                                         cliente5[2] -= COMISION
+                                        importe_comisiones += COMISION
+
                                     break
                                 else:
                                     print('El cajero no puede entregar el monto solicitado')
