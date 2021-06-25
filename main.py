@@ -77,7 +77,9 @@ while True:
 
         passwd = input('Ingrese su clave: ')
 
-        # Evalúo si la pass es correcta
+        # Evalúo si la pass es correcta.
+        # Si es correcta, se guarda el id del cliente en la variable user_id
+        # y se le da un mensaje de bienvenida
         if passwd == cliente1[5]:
             user_id = 1
             print(f'Bienvenido {cliente1[3]}')
@@ -98,13 +100,17 @@ while True:
             print('Clave incorrecta!')
             if user_name == cliente1[4]:
                 tries_cliente1 += 1
-            elif user_name == cliente2[4]:
+            
+            if user_name == cliente2[4]:
                 tries_cliente2 += 1
-            elif user_name == cliente3[4]:
+            
+            if user_name == cliente3[4]:
                 tries_cliente3 += 1
-            elif user_name == cliente4[4]:
+            
+            if user_name == cliente4[4]:
                 tries_cliente4 += 1
-            elif user_name == cliente5[4]:
+            
+            if user_name == cliente5[4]:
                 tries_cliente5 += 1
 
         
@@ -114,8 +120,8 @@ while True:
                 cliente1[1] = False
                 break
         elif user_name == cliente2[4]:
-            if tries_cliente3 >= 3:
-                cliente3[1] = False
+            if tries_cliente2 >= 3:
+                cliente2[1] = False
                 break
         elif user_name == cliente3[4]:
             if tries_cliente3 >= 3:
@@ -145,24 +151,29 @@ while True:
             # del banco BANMAS, le descuento $9.50 de comisión.
             if option == 1:
                 if user_id == 1:
-                    if cliente1[6] != 'BANMAS': 
+                    if cliente1[6] != 'BANMAS':
                         cliente1[2] -= COMISION
+                        importe_comisiones += COMISION
                     print(f'Su saldo es: ${cliente1[2]}')
                 elif user_id == 2:
                     if cliente2[6] != 'BANMAS':
                         cliente2[2] -= COMISION
+                        importe_comisiones += COMISION
                     print(f'Su saldo es: ${cliente2[2]}')
                 elif user_id == 3:
                     if cliente3[6] != 'BANMAS':
                         cliente3[2] -= COMISION
+                        importe_comisiones += COMISION
                     print(f'Su saldo es: ${cliente3[2]}')
                 elif user_id == 4:
                     if cliente4[6] != 'BANMAS':
                         cliente4[2] -= COMISION
+                        importe_comisiones += COMISION
                     print(f'Su saldo es: ${cliente4[2]}')
                 elif user_id == 5:
                     if cliente5[6] != 'BANMAS':
                         cliente5[2] -= COMISION
+                        importe_comisiones += COMISION
                     print(f'Su saldo es: ${cliente5[2]}')
             # Si el usuario ingresa la opción 2, le solicito que ingrese el saldo a depositar. Este saldo solamente podrá 
             # depositarse si es múltiplo de 50. En el caso de que su tarjeta no sea del banco BANMAS, le descuento $9.50 de comisión.
